@@ -4,7 +4,9 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Final ROC-AUC](https://img.shields.io/badge/ROC--AUC-0.9431-brightgreen.svg)]()
 
-This project demonstrates the full Machine Learning lifecycle, from clinical feature engineering and model comparison to advanced interpretability (SHAP), to predict the risk of Type 2 Diabetes using real-world public health data (NHANES 2017-2020).
+This project transforms real U.S. public health data (NHANES 2017–2020) into a **high-performance, fully explainable Type 2 Diabetes risk prediction model.**
+
+From **raw clinical biomarkers** to an optimized **XGBoost model (AUC: 0.9431)**, this work demonstrates a complete ML pipeline with production-ready artifacts and advanced interpretability (SHAP).
 
 | Metric | Score | Status |
 | :--- | :--- | :--- |
@@ -13,9 +15,11 @@ This project demonstrates the full Machine Learning lifecycle, from clinical fea
 | Top Feature | Age | SHAP Confirmed |
 
 ---
-##  1. The Challenge and Data
+##  1. Problem Overview
 
-**Goal:** Build, compare, and optimize models for diabetes risk prediction, focusing on **explainability** (trust) to derive actionable clinical insights from complex biomarkers.
+Diabetes is a chronic condition with massive public health impact. Early detection is critical — but many risk models either lack accuracy or interpretability.
+
+**Goal:** Build a **clinically meaningful, transparent, high-performance** ML model to predict diabetes using national-level biomarker data.
 
 **Data Source:** The National Health and Nutrition Examination Survey (**NHANES**) 2017-2020. This is a crucial, high-quality, real-world public health dataset provided by the U.S. Centers for Disease Control and Prevention (CDC).
 
@@ -104,13 +108,45 @@ The dependence plot for the top feature, **Age**, confirms a clear monotonic rel
 ##  6. Repository Structure & Reproduction
 
 ### Repository Structure
+```
+Diabetes-risk-prediction-shap-nhanes/
+├── diabetes_prediction_project.py
+├── output
+│   ├── feature_importance_shap.csv
+│   ├── scaler_for_deployment.pkl
+│   └── xgb_final_model.pkl
+├── README.md
+├── P_BMX 2017-2020.xpt
+├── P_DEMO 2017-2020.xpt
+├── P_DIQ 2017-2020.xpt
+├── P_GHB 2017-2020.xpt
+├── P_GLU 2017-2020.xpt
+└── P_INS 2017-2020.xpt
+
+```
 
 ---
 
 ### How to Reproduce
+1.  **Clone the repository:**
+ 
+ ```bash
+    git clone [https://github.com/zainabbutul14/Diabetes-risk-prediction-shap-nhanes]
+    cd [Diabetes-risk-prediction-shap-nhanes]
+```
 
+2. **Run the script:**
+    Execute the main Python script to perform the data processing, modeling, evaluation, and saving of artifacts.
 
+ ```bash
+    python diabetes_prediction_project.py
+ ```
+
+---
 
 ### Licensing
 
 This project is licensed under the **MIT License**.
+
+
+
