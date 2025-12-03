@@ -1,0 +1,8 @@
+feature,mean_abs_shap
+Glucose,0.18510681
+Insulin,0.032601297
+HbA1c,1.3275348
+BMI,0.3185871
+Age,1.3778634
+HOMA_IR,0.04272631
+Ins_Glu_Ratio,0.07814666
